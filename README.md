@@ -1,6 +1,8 @@
 “遇见”读书论坛 
 这是一个读书人的社区，在这里遇见你，遇见更好的自己
 
+ps.若想运行，yj.sql为数据库脚本，WebApplication1是具体项目
+
 大三上学期学校工作室项目。 运用了简单的HTML对项目进行布局，项目架构为简单三层，涉及了JavaScript、jQuery、asp.net webform,SQL server等开发技术。
 
 网站主要面向两个端口，用户端、以及管理员端口。
