@@ -1,0 +1,269 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebPage.master.cs" Inherits="WebApplication1.WebPage" %>
+<%@ Register TagName="WebBottom" TagPrefix="uc1" Src="~/UserControl/WebBottom.ascx"%>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #menu 
+        {
+            margin:0 auto;
+            width:100%;
+            height:auto;
+        }
+        #menu div
+        {
+            float:left;
+            width:180px;
+            height:40px;
+            line-height:40px;
+            position:relative;
+            text-align:center;
+            background-color:#768183;
+            top: 0px;
+            left: 0px;
+        }
+            #menu div span
+            {
+                width:161px;
+                cursor:pointer;
+                padding:5px;/*内边距*/
+            }
+            
+            #menu div:hover
+            {
+                color:#808080;
+            }
+
+            #menu div span a
+            {
+                text-decoration:none;
+                font-style:normal;
+                color:black;
+            }
+            #menu div ul
+            {
+                padding:0px;
+                margin:0px;
+                border:0px;
+                clear:both;
+                list-style:none;
+                visibility:hidden;
+                position:absolute;
+                left:31px;
+                top:40px;
+                font-size:15px;
+                z-index:1000;
+            }
+            #menu div ul li
+            {
+                padding:0px;
+                margin:0px;
+                border:0px;
+                clear:both;
+                line-height:20px;
+                padding:5px;
+                background-color:#5a7365;
+                
+            }
+                #menu div ul li:hover
+                {
+                    background-color:steelblue;
+                }
+            #menu div span:hover a
+            {
+                color:white;
+            }
+                #menu div ul li:hover a
+                {
+                    color:white;
+                }
+              #menu div ul a 
+              {
+                  text-decoration:none;
+                  color:black;
+              }
+            #menu div:hover ul
+            {
+                visibility:visible;
+            }
+            #menu div span em
+            {
+                font-style:normal;
+                float: left;
+                width: 66px;
+                height: 10px;
+                margin:0 5px 5px 0;
+                vertical-align: middle;
+            }
+            #menu div span em i 
+            {
+                display: block;
+                width: 16px;
+                height: 2px;
+                margin-bottom: 4px;
+                background: #d5d5d6;
+                text-decoration:none;
+            }    
+            #menu div span 
+            {
+                font: 16px/38px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+                display: block;
+                padding: 0 0 0 18px;
+                transition: all .5s;
+                color: #fff;
+                
+            }
+            .logo-wrap .book-shelf
+            {
+                overflow: hidden;
+                width: 180px;
+                height: 70px;
+                background: #fff;
+                margin-top:22px;
+            }
+            .fr
+            {
+                float:right;
+                text-decoration:none;
+                 
+            }
+            .logo-wrap .box-center
+            {
+                position:relative;
+            }
+            .cf
+            {
+                zoom:1;
+            }
+            .box-center
+            {
+                width:1080px;
+                margin-right:auto;
+                margin-left:auto;
+            }
+            .inconfont
+            {
+                font-family: qd_iconfont!important;
+    
+                font-style: normal;
+                /*-webkit-font-smoothing: antialiased;
+                -webkit-text-stroke-width: .1px;*/
+            }
+            .logo-wrap .logo
+            {
+                width: 219px;
+                height: 70px;
+                margin: 16px 184px 0 0;
+            }
+            .fl
+            {
+                float:left;
+            }
+            .logo-wrap .book-shelf .i
+            {
+                line-height: 38px;
+                overflow: hidden;
+                width: 56px;
+                height: 38px;
+                margin-right: 3px; 
+            }
+
+            a:-webkit-any-link 
+            {
+                color: -webkit-link;
+                text-decoration:none;
+                cursor: auto;
+            }
+            
+           
+        .auto-style1 {
+            visibility: hidden;
+            position: absolute;
+            left: 31px;
+            top: 40px;
+            width: 179px;
+            height: 225px;
+        }
+       
+           
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div >
+         <div style="width:1080px; background-color:white;margin:0px auto;height:auto;">
+         <div class="logo-wrap box-cneter">
+             <div class="box-cneter cf">
+                 <div class="book-shelf fr"  >
+                    <ul style="list-style:none;">
+                   <li>
+                       <asp:Panel runat="server" ID="panelLR">
+                     <a href="login.aspx"> 
+                         <i style="font-style:normal;  ">登录</i>
+                     </a>
+
+                     |<a href="register.aspx">
+                         <i style="font-style:normal;   ">注册</i>
+                      </a>
+                      </asp:Panel>
+                   </li>
+
+                     <li>
+                    <asp:Panel runat="server" ID="panelUser">
+                     <asp:Label   runat="server" ID="lblName" Text="用户名" ForeColor="#666666"></asp:Label>
+                     <asp:LinkButton runat="server" ID="lbExit" ForeColor="#808080" OnClick="lbExit_Click">[退出]</asp:LinkButton>
+                    </asp:Panel>
+                      </li>    
+                </ul>
+                 </div>
+                 <div class="logo fl">
+                    <a href="index.aspx">
+                     <asp:Image ID="Image1" runat="server"  ImageUrl="~/Images/logo.png" Height="80px" Width="180px" />
+                    </a>
+                 </div>
+             </div>
+
+         </div>
+        <div style="width:1080px;margin:0 auto; overflow:hidden;clear:both;">
+            <div id="menu">
+                <div>
+                    <span>
+                        <a href="index.aspx">首页</a>
+                    </span>
+                </div>
+                
+                <div >
+                    <span><a href="tushu.aspx" >全部图书</a></span>
+                </div>
+                <div>
+                    <span><a href="huati.aspx">话题广场</a></span>
+                </div>
+                <div>
+                    <span><a href="chuangzuo.aspx">创作园地</a></span>
+                </div>
+                <div>
+                    <span><a href="shudan.aspx">口味书单</a> </span>
+                </div>
+                <div>
+                    <span><a href="wode.aspx">关于我们</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+        </asp:ContentPlaceHolder>
+    </div>
+        <div style="clear:both;height:auto;">
+           <uc1:WebBottom runat="server" ID="WebBottom" /> 
+ 
+        </div>
+    </form>
+</body>
+</html>

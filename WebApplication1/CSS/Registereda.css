@@ -1,0 +1,21 @@
+﻿body {
+}
+#registered{width:1100px;margin:0 auto;}
+
+#logo{width:1100px;height:100px;}
+#logo .logoimg{position:relative;left:10px;}
+#logo h2{position:relative;left:100px;bottom:10px;}
+#logo .page{float:right;position:relative;bottom:60px;right:20px;text-decoration:none;color:#0099FF;}
+#logo .page:hover{color:#FF9933;}
+
+#main{border:1px solid gray;padding-bottom:20px;
+    width: 1080px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+#main .maina{padding:30px 0px 30px 80px;}
+#maina{position:relative;left:401px;
+top: 1px;
+width: 426px;
+}
+#maina table .he{height:30px;}
