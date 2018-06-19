@@ -31,3 +31,7 @@
 书单模块，由字面可以知道，是一个类似网易云歌单的模块。在这创建属于你的书单、然后把你爱的、和你感兴趣的图书汇聚到一起。当然，你也可以收藏你看上的书单，或者在你看好的书单下发表一手评论、火钳刘明（火前留名）！
 
 ![书单](https://github.com/CHIclay/YUJ/blob/master/image/list.png)
+
+
+管理员,后台管理模块，大体差不多。
+![管理员](https://github.com/CHIclay/YUJ/blob/master/image/manager.png)
